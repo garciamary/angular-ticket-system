@@ -1,0 +1,14 @@
+.card-footer {
+  float: right !important;
+}
+
+
+.card-header{
+  color: white;
+  background-color: #008060;
+}
+
+.btn {
+  color: white;
+  background-color: #008060;
+}

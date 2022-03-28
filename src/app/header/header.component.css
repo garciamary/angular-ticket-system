@@ -1,0 +1,36 @@
+li {
+  align-items: center;
+  cursor: pointer;
+}
+
+.navbar-brand {
+  color: white;
+}
+
+header {
+  margin-bottom: 50px;
+}
+
+.btn {
+  background-color: #008060;
+}
+
+.btn:hover {
+  background-color: #008060a6;
+}
+
+.brand {
+  color: #008060;
+}
+li:active {
+  background-color: #00806086;
+  color: white !important;
+  border-radius: 10px;
+}
+
+li:hover {
+
+  background-color: #00806086;
+  color: white !important;
+  border-radius: 10px;
+}

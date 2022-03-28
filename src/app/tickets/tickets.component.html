@@ -1,0 +1,42 @@
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true">
+  <p style="color: white" > Loading... </p>
+</ngx-spinner>
+
+<div class="container py-4">
+  <div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+      <h1 class="display-5 fw-bold">My Tickets</h1>
+      <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
+
+    </div>
+  </div>
+
+  <div class="input-group">
+    <input type="search" class="form-control rounded sm" placeholder="Search" name="searchbox"  id="searchInput"/>
+    <button type="button" class="btn" id="btnSearch">search</button>
+</div>
+<hr>
+  <div class="row align-items-md-stretch">
+  <div class="col-md-6" *ngFor="let ticket of tickets">
+    <div class="card shadow-sm">
+      <div class="card-header">
+       {{ticket.name}}
+       <span class="badge rounded-pill bg-light text-dark" id="lowMidHigh">{{ ticket.priority }}</span>
+      </div>
+      <!-- <div class="card-body h-100 text-white bg-dark"> -->
+        <div class="card-body">
+        <h5 class="card-title">{{ticket.subject}} {{ticket.label}}</h5>
+        <button class="btn btn-sm" type="button" [routerLink]="'/tickets/' + ticket.id">View</button>
+      </div>
+      <div class="card-footer text-muted bg-light">
+       {{ticket.status}}
+       {{ticket.created_at | date:'longDate'}}
+      </div>
+
+    </div>
+    <br>
+  </div>
+</div>
+
+
+

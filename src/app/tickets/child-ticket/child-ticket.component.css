@@ -1,0 +1,45 @@
+
+.container {
+  max-width: 960px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 30px;
+}
+
+
+
+.card{
+  min-height: 150px;
+  height: 150px auto;
+}
+
+.card-header{
+  height: 40px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.card-body{
+  padding: 30px;
+}
+
+
+.card p {
+  margin-left: 50px;
+}
+
+h5 {
+  margin-left: 20px;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.header{
+  color: white;
+  background-color: #008060;
+}
+
+.back {
+  background-color: #008060;
+}

@@ -1,0 +1,93 @@
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true">
+  <p style="color: white" > Loading... </p>
+</ngx-spinner>
+
+<div class="container">
+  <div class="container-2 ">
+      <div class="row align-items-md-stretch">
+        <div class="back col-3 py-3"><img [routerLink]="'/tickets'" class="button" src="../../assets/img/arrow-left.svg" alt="" width="38" height="28"></div>
+          <div class="header col py-3 px-lg-4 ">
+              <h4>{{ticket.subject}} {{ticket.label}}</h4>
+
+          </div>
+          <div class="w-100"></div>
+          <div class="col py-3 px-lg-4 bg-light">
+              <p><b>Submitted At</b></p>
+          </div>
+          <div class="col py-3 px-lg-4 bg-light">
+              <p><b>Assignee</b></p>
+          </div>
+          <div class="col py-3 px-lg-4 bg-light">
+              <p><b>Status</b></p>
+          </div>
+          <div class="col py-3 px-lg-4 bg-light">
+              <p><b>Priority</b></p>
+          </div>
+
+
+          <div class="w-100"></div>
+          <div class="col py-3 px-lg-4">
+            <p class="text-muted">  {{ticket.created_at | date:'longDate'}}</p>
+          </div>
+          <div class="col py-3 px-lg-4">
+            <p class="text-muted">{{ticket.assignee_id}}</p>
+          </div>
+          <div class="col py-3 px-lg-4">
+            <p class="text-muted">{{ ticket.status }}</p>
+          </div>
+          <div class="col py-3 px-lg-4">
+            <p class="text-muted">{{ticket.priority}}</p>
+          </div>
+          <div class="w-100"></div>
+          <hr>
+
+          <div class="row">
+            <div class="col-sm-3 py-3 px-lg-4 bg-light" >
+              <p><b>Name</b></p>
+            </div>
+            <div class="col-md-9 py-3 px-lg-4">
+              <p class="text-muted">{{ticket.name}}</p>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <hr>
+
+          <div class="container-3 bg-light">
+            <div class="col bg-secondary">
+              <h5 class=" py-3 justify-content-right text-white">Messages</h5>
+            </div>
+            <div class="content">
+                <div class="row sm-3  justify-content-center">
+                    <div class="col py-3">
+                        <div class="card shadow-sm">
+                            <br><br>
+                            <p><b></b></p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="col-9 py-3">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-light">
+
+
+                            </div>
+                            <div class="card-body">
+                              <!-- <div [innerHtml] = "message.message" class="message" ></div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- container -333 -->
+          </div>
+
+
+          <!-- row ending tag -->
+      </div>
+
+      <!-- container-22222 -->
+  </div>
+</div>

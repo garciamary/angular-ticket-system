@@ -1,0 +1,88 @@
+<div class="container col-xl-10 col-xxl-8 px-4 py-5">
+  <div class="px-8 py-10 my-10 text-center">
+    <h1 class="display-5 fw-bold">Contact Us</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">
+        Quickly design and customize responsive mobile-first sites with
+        Bootstrap, the world’s most popular front-end open source toolkit,
+        featuring Sass variables and mixins, responsive grid system, extensive
+        prebuilt components, and powerful JavaScript plugins.
+      </p>
+    </div>
+  </div>
+
+  <div class="col-md-10 mx-auto col-lg-10">
+    <form class="p-4 p-md-5 border rounded-3 bg-light">
+      <div class="row g-3">
+        <div class="col-sm-6">
+          <label for="firstName" class="form-label">First name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="firstName"
+            placeholder=""
+            value=""
+            required=""
+          />
+          <div class="invalid-feedback">Valid first name is required.</div>
+        </div>
+
+        <div class="col-sm-6">
+          <label for="lastName" class="form-label">Last name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="lastName"
+            placeholder=""
+            value=""
+            required=""
+          />
+          <div class="invalid-feedback">Valid first name is required.</div>
+        </div>
+        <div class="col-sm-6">
+          <label for="emailAdd" class="form-label">Email Address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="emailAdd"
+            placeholder=""
+            value=""
+            required=""
+          />
+          <div class="invalid-feedback">Valid first name is required.</div>
+        </div>
+
+        <div class="col-sm-6">
+          <label for="concern" class="form-label">Concern</label>
+          <select
+            class="form-select form-select-sm-6"
+            aria-label=".form-select-sm example"
+          >
+            <option selected="" class="tex-muted">select your issue</option>
+            <option value="1"></option>
+            <option value="2"></option>
+            <option value="3"></option>
+            <div class="invalid-feedback">Valid last name is required.</div>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <label for="message" class="form-label">Message</label>
+        <textarea
+          class="form-control"
+          aria-label="With textarea"
+          id="message"
+        ></textarea>
+      </div>
+      <br />
+      <button class="w-100 btn btn-lg " type="submit">Submit</button>
+      <hr class="my-4" />
+      <small class="text-muted"
+        >By clicking submit, you agree to the terms of use.</small
+      >
+    </form>
+  </div>
+  <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true">
+    <p style="color: white" > Loading... </p>
+  </ngx-spinner>
+</div>

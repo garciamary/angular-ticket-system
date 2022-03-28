@@ -1,0 +1,13 @@
+.container-sm {
+  max-width: 900px;
+}
+
+
+.btn {
+  color: white;
+  background-color: #008060;
+}
+
+.btn:hover{
+  background-color: #008060a6;
+}

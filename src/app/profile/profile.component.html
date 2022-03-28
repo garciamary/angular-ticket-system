@@ -1,0 +1,86 @@
+
+ <ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="square-jelly-box" [fullScreen]="true">
+  <p style="color: white" > Loading... </p>
+</ngx-spinner>
+
+  <div class="container py-3 px-lg-4">
+    <main>
+      <div class=" header d-flex align-items-center p-3 my-3  rounded shadow-sm">
+        <img class="me-3" src="../../assets/img/person-circle.svg" alt="" width="48" height="38">
+        <div class="lh-1">
+          <h1 class="h6 mb-0 lh-1">Welcome back, <b>{{information.name}}!</b> </h1>
+          <small >About</small>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col ">
+          <h5 class="mb-3">General information</h5>
+          <form class="needs-validation" novalidate="">
+            <div class="row align-items-center md-stretch">
+              <div class="col-sm-6">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="{{information.name}}" value="" required="">
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="role" class="form-label">Role</label>
+                <input type="text" class="form-control" id="role" placeholder="{{information.role}}" value="" required="" disabled>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+                <input type="email" class="form-control" id="email" placeholder="{{information.email}}">
+                <div class="invalid-feedback">
+                  Please enter a valid email address for shipping updates.
+                </div>
+              </div>
+
+
+              <div class="col-sm-6">
+                <label for="createdAt" class="form-label">Created At</label>
+                <input type="text" class="form-control"  placeholder="{{information.created_at | date:'longDate'}}" disabled>
+                <div class="invalid-feedback">
+                  Please enter a valid email address for shipping updates.
+                </div>
+              </div>
+
+              <div class="col-sm-6"> </div>
+
+              <div class="col-sm-6">
+                <label for="homeNumber" class="form-label">Updated At</label>
+                <input type="text" class="form-control" id="homeNumber" placeholder="{{information.created_at | date:'longDate'}}" disabled >
+                <div class="invalid-feedback">
+                  Please enter a valid email address for shipping updates.
+                </div>
+              </div>
+
+
+
+            <hr class="my-4">
+
+            <div class="col-sm-6">
+              <label for="newPassword" class="form-label">New Password</label>
+              <input type="password" class="form-control" id="newPassword" placeholder="">
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+            </div>
+
+             <div class="col-sm-6">
+               <br>
+              <button class="btn" type="submit">Save Profile</button>
+            </div>
+          </div>
+
+
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
