@@ -11,6 +11,8 @@ export class ProfileService {
 
   constructor(private _httpClient: HttpClient, private _appAuthService: AppAuthService) { }
 
+
+  // GET ALL THE TICKETS
   getAll() : any{
     const token = this._appAuthService.getSession()
       return this._httpClient.get(this.url, {
