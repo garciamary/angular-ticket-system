@@ -16,6 +16,10 @@
     <button type="button" class="btn" id="btnSearch">search</button>
 </div>
 <hr>
+<div>
+  <button [routerLink]="'create-ticket'" [routerLinkActive]="'active'" type="button" class="btn text-white">Submit a Ticket</button>
+</div>
+<hr>
   <div class="row align-items-md-stretch">
   <div class="col-md-6" *ngFor="let ticket of tickets">
     <div class="card shadow-sm">

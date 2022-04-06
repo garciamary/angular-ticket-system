@@ -1,3 +1,4 @@
+import { CreateTicketComponent } from './tickets/create-ticket/create-ticket.component';
 import { ChildTicketComponent } from './tickets/child-ticket/child-ticket.component';
 import { AppGuardGuard } from './app-guard.guard';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
@@ -30,6 +31,10 @@ const routes: Routes = [
     path: 'tickets',
     component: TicketsComponent,
     canActivate: [AppGuardGuard]
+  },
+  {
+    path: 'tickets/create-ticket',
+    component: CreateTicketComponent,
   },
   {
     path: 'tickets/:id',

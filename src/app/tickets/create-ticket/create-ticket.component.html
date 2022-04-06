@@ -1,0 +1,69 @@
+
+ <ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="square-jelly-box" [fullScreen]="true">
+  <p style="color: white" > Loading... </p>
+</ngx-spinner>
+
+  <div class="container py-3 px-lg-4">
+    <main>
+
+      <div class="row">
+        <div class="col ">
+          <h5 class="mb-3">General information</h5>
+          <form class="needs-validation" novalidate="" [formGroup]="form" (ngSubmit)="submitTicket()">
+            <div class="row align-items-center md-stretch">
+              <div class="col-sm-6">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="" value="" required="">
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="Subject" class="form-label">Subject</label>
+                <input type="text" class="form-control" id="subject" placeholder="" value="" required="">
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="Label" class="form-label">Label</label>
+                <input type="text" class="form-control" id="label" placeholder="">
+                <div class="invalid-feedback">
+                  Please enter a valid email address for shipping updates.
+                </div>
+              </div>
+
+              <div class="col-sm-6" >
+                <label for="Priority" class="form-label">Priority</label>
+                <select class="form-select" id="priority" name="priority">
+                <option selected value=""></option>
+                    <option value="Low">Low</option>
+                    <option value="Low">Mid</option>
+                    <option value="Low">High</option>
+                </select>
+            </div>
+
+              <div class="col-sm-6" >
+                  <label for="Status" class="form-label">Status</label>
+                  <select class="form-select" id="status" name="status">
+                  <option selected value=""></option>
+                      <option value="Resolved">Resolved</option>
+                      <option value="On-going">On-going</option>
+                      <option value="Rejected">Rejected</option>
+                  </select>
+              </div>
+
+             <div class="col-sm-6">
+               <br>
+              <button class="btn" type="submit">Submit Ticket</button>
+            </div>
+          </div>
+
+
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>

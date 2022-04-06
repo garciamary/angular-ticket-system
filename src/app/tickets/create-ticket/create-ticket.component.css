@@ -1,0 +1,28 @@
+.container {
+  max-width: 960px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 30px;
+}
+
+
+.header {
+  color: white;
+  background-color: #008060;
+}
+
+
+.btn {
+  float: right;
+  margin-top: 7px;
+  color: white;
+  background-color: #008060;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  color: black;
+  background-color: #008060a6;
+}
+.row{
+  padding: 10px;
+}

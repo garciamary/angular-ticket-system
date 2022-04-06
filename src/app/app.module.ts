@@ -18,6 +18,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { ChildTicketComponent } from './tickets/child-ticket/child-ticket.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CreateTicketComponent } from './tickets/create-ticket/create-ticket.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ContactComponent,
     PagenotfoundComponent,
     ProfileComponent,
-    ChildTicketComponent
+    ChildTicketComponent,
+    CreateTicketComponent
   ],
   imports: [
     BrowserModule,
