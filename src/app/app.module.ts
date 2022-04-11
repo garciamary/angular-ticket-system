@@ -19,6 +19,7 @@ import { ChildTicketComponent } from './tickets/child-ticket/child-ticket.compon
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CreateTicketComponent } from './tickets/create-ticket/create-ticket.component';
+import { UpdateTicketComponent } from './tickets/update-ticket/update-ticket.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { CreateTicketComponent } from './tickets/create-ticket/create-ticket.com
     PagenotfoundComponent,
     ProfileComponent,
     ChildTicketComponent,
-    CreateTicketComponent
+    CreateTicketComponent,
+    UpdateTicketComponent
   ],
   imports: [
     BrowserModule,

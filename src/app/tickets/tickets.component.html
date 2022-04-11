@@ -1,6 +1,4 @@
-<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true">
-  <p style="color: white" > Loading... </p>
-</ngx-spinner>
+
 
 <div class="container py-4">
   <div class="p-5 mb-4 bg-light rounded-3">
@@ -26,15 +24,18 @@
       <div class="card-header">
        {{ticket.name}}
        <span class="badge rounded-pill bg-light text-dark" id="lowMidHigh">{{ ticket.priority }}</span>
+
       </div>
       <!-- <div class="card-body h-100 text-white bg-dark"> -->
         <div class="card-body">
         <h5 class="card-title">{{ticket.subject}} {{ticket.label}}</h5>
         <button class="btn btn-sm" type="button" [routerLink]="'/tickets/' + ticket.id">View</button>
+
       </div>
       <div class="card-footer text-muted bg-light">
        {{ticket.status}}
        {{ticket.created_at | date:'longDate'}}
+       <button class="btn btn-sm bg-danger " style="float: right;" type="button" (click)="delTicket(ticket.id)">Delete</button>
       </div>
 
     </div>

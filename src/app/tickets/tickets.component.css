@@ -12,3 +12,7 @@
   color: white;
   background-color: #008060;
 }
+
+.btnEdit:hover {
+  background-color: #2cac8c;
+}

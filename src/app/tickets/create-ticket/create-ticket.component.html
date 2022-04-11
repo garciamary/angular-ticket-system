@@ -36,21 +36,35 @@
               </div>
 
               <div class="col-sm-6" >
+                <label for="Priority" class="form-label">Assignee</label>
+                <select class="form-select" id="assignee_id" name="assignee_id" formControlName="assignee_id" >
+                    <option selected value="{{user.id}}" *ngFor="let user of users">{{user.id}}</option>
+                </select>
+            </div>
+
+              <div class="col-sm-6">
+                <label for="Label" class="form-label">Submitter</label>
+                <input type="text" class="form-control" id="submitter_id" formControlName="submitter_id" placeholder="{{submitter.id}}" >
+                <div class="invalid-feedback">
+                  Please enter a valid email address for shipping updates.
+                </div>
+              </div>
+
+
+              <div class="col-sm-6" >
                 <label for="Priority" class="form-label">Priority</label>
                 <select class="form-select" id="priority" name="priority" formControlName="priority">
-                <option selected value=""></option>
-                    <option value="Low">Low</option>
-                    <option value="Low">Mid</option>
-                    <option value="Low">High</option>
+                    <option selected value="Low">Low</option>
+                    <option value="Mid">Mid</option>
+                    <option value="High">High</option>
                 </select>
             </div>
 
               <div class="col-sm-6" >
                   <label for="Status" class="form-label">Status</label>
                   <select class="form-select" id="status" name="status" formControlName="status">
-                  <option selected value=""></option>
+                      <option selected value="On-going">On-going</option>
                       <option value="Resolved">Resolved</option>
-                      <option value="On-going">On-going</option>
                       <option value="Rejected">Rejected</option>
                   </select>
               </div>

@@ -28,5 +28,10 @@ export class TicketsService {
     });
   }
 
-
+  deleteTicket(id : string) : any{
+    const token = this._appAuthService.getSession();
+    return this._httpClient.delete(this.url + id ,{
+      headers: new HttpHeaders().set("Authorization" , "Bearer " + token)
+    });
+  }
 }

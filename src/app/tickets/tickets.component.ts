@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { TicketsService } from './../tickets.service';
 import { NgxSpinnerService } from 'ngx-spinner';
 
+
 @Component({
   selector: 'app-tickets',
   templateUrl: './tickets.component.html',
@@ -28,6 +29,14 @@ export class TicketsComponent implements OnInit {
     );
 
   }
+
+  delTicket(id : any){
+    this._ticketsService.deleteTicket(id).subscribe((data : any)=>{
+         console.log("success");
+    });
+}
+
+
 
 
 }
