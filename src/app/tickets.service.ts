@@ -10,7 +10,9 @@ export class TicketsService {
 
  url = 'http://localhost:8000/api/tickets/';
 
-  constructor(private _httpClient:HttpClient, private _appAuthService:AppAuthService) { }
+  constructor(
+     private _httpClient:HttpClient,
+     private _appAuthService:AppAuthService) { }
 
   getAll(): any{
     const token = this._appAuthService.getSession()
@@ -25,5 +27,6 @@ export class TicketsService {
       headers: new HttpHeaders ().set("Authorization" , "Bearer " + token)
     });
   }
+
 
 }

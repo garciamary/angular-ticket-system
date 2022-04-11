@@ -13,7 +13,7 @@
             <div class="row align-items-center md-stretch">
               <div class="col-sm-6">
                 <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="" value="" required="">
+                <input type="text" class="form-control" id="name" value="" required="" formControlName="name">
                 <div class="invalid-feedback">
                   Valid first name is required.
                 </div>
@@ -21,7 +21,7 @@
 
               <div class="col-sm-6">
                 <label for="Subject" class="form-label">Subject</label>
-                <input type="text" class="form-control" id="subject" placeholder="" value="" required="">
+                <input type="text" class="form-control" id="subject" value="" required="" formControlName="subject">
                 <div class="invalid-feedback">
                   Valid last name is required.
                 </div>
@@ -29,7 +29,7 @@
 
               <div class="col-sm-6">
                 <label for="Label" class="form-label">Label</label>
-                <input type="text" class="form-control" id="label" placeholder="">
+                <input type="text" class="form-control" id="label"  formControlName="label">
                 <div class="invalid-feedback">
                   Please enter a valid email address for shipping updates.
                 </div>
@@ -37,7 +37,7 @@
 
               <div class="col-sm-6" >
                 <label for="Priority" class="form-label">Priority</label>
-                <select class="form-select" id="priority" name="priority">
+                <select class="form-select" id="priority" name="priority" formControlName="priority">
                 <option selected value=""></option>
                     <option value="Low">Low</option>
                     <option value="Low">Mid</option>
@@ -47,7 +47,7 @@
 
               <div class="col-sm-6" >
                   <label for="Status" class="form-label">Status</label>
-                  <select class="form-select" id="status" name="status">
+                  <select class="form-select" id="status" name="status" formControlName="status">
                   <option selected value=""></option>
                       <option value="Resolved">Resolved</option>
                       <option value="On-going">On-going</option>
