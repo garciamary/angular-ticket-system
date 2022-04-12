@@ -9,7 +9,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class ProfileComponent implements OnInit {
 
-
+  message:any = '';
   information: any = '';
 
   constructor(private _profileService:ProfileService, private spinnerService:NgxSpinnerService) {
@@ -24,6 +24,18 @@ export class ProfileComponent implements OnInit {
       (informations: any) => {
         console.log(informations);
         this.information = informations;
+      }
+    );
+  }
+
+  updateProfile(): void {
+    this._profileService.updateUser(this.information).subscribe(
+      (response: any) => {
+        console.log(response);
+        this.message = 'The user was updated!';
+      },
+      (error: any) => {
+        console.log(error);
       }
     );
   }

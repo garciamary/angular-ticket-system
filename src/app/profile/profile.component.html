@@ -15,11 +15,11 @@
       <div class="row">
         <div class="col ">
           <h5 class="mb-3">General information</h5>
-          <form class="needs-validation" novalidate="">
+
             <div class="row align-items-center md-stretch">
               <div class="col-sm-6">
                 <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="{{information.name}}" value="" required="">
+                <input type="text" class="form-control" id="name" [(ngModel)]="information.name" placeholder="{{information.name}}" value="" required="">
                 <div class="invalid-feedback">
                   Valid first name is required.
                 </div>
@@ -27,7 +27,7 @@
 
               <div class="col-sm-6">
                 <label for="role" class="form-label">Role</label>
-                <input type="text" class="form-control" id="role" placeholder="{{information.role}}" value="" required="" disabled>
+                <input type="text" class="form-control" id="role" [(ngModel)]="information.role" placeholder="{{information.role}}" value="" required="">
                 <div class="invalid-feedback">
                   Valid last name is required.
                 </div>
@@ -35,7 +35,7 @@
 
               <div class="col-sm-6">
                 <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
-                <input type="email" class="form-control" id="email" placeholder="{{information.email}}">
+                <input type="email" class="form-control" id="email" [(ngModel)]="information.email" placeholder="{{information.email}}">
                 <div class="invalid-feedback">
                   Please enter a valid email address for shipping updates.
                 </div>
@@ -44,7 +44,7 @@
 
               <div class="col-sm-6">
                 <label for="createdAt" class="form-label">Created At</label>
-                <input type="text" class="form-control"  placeholder="{{information.created_at | date:'longDate'}}" disabled>
+                <input type="text" class="form-control" [(ngModel)]="information.created_at" placeholder="{{information.created_at | date:'longDate'}}" disabled>
                 <div class="invalid-feedback">
                   Please enter a valid email address for shipping updates.
                 </div>
@@ -54,7 +54,7 @@
 
               <div class="col-sm-6">
                 <label for="homeNumber" class="form-label">Updated At</label>
-                <input type="text" class="form-control" id="homeNumber" placeholder="{{information.created_at | date:'longDate'}}" disabled >
+                <input type="text" class="form-control" id="updated_at" [(ngModel)]="information.updated_at" placeholder="{{information.created_at | date:'longDate'}}" disabled >
                 <div class="invalid-feedback">
                   Please enter a valid email address for shipping updates.
                 </div>
@@ -66,7 +66,7 @@
 
             <div class="col-sm-6">
               <label for="newPassword" class="form-label">New Password</label>
-              <input type="password" class="form-control" id="newPassword" placeholder="">
+              <input type="password" class="form-control" id="newPassword" [(ngModel)]="information.password" placeholder="">
               <div class="invalid-feedback">
                 Please enter a valid email address for shipping updates.
               </div>
@@ -74,12 +74,9 @@
 
              <div class="col-sm-6">
                <br>
-              <button class="btn" type="submit">Save Profile</button>
+              <button class="btn" type="submit" (click)="updateProfile()">Save Profile</button>
             </div>
           </div>
-
-
-          </form>
         </div>
       </div>
     </main>

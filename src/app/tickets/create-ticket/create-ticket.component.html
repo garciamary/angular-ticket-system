@@ -38,7 +38,7 @@
               <div class="col-sm-6" >
                 <label for="Priority" class="form-label">Assignee</label>
                 <select class="form-select" id="assignee_id" name="assignee_id" formControlName="assignee_id" >
-                    <option selected value="{{user.id}}" *ngFor="let user of users">{{user.id}}</option>
+                    <option selected value="{{user.id}}" *ngFor="let user of users">{{user.name}}</option>
                 </select>
             </div>
 
